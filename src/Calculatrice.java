@@ -5,12 +5,10 @@ public class Calculatrice {
     char sign;
     double var1;
     double var2;
-    
-    double resultAdd = getVar1() + getVar2();
-    double resultSous = getVar1() - getVar2();
-    double resultMult = getVar1() * getVar2();
-    double resultDiv = getVar1() / getVar2();
-    
+    double resultAdd;
+    double resultSous;
+    double resultMult;
+    double resultDiv;   
     
     
     /**
@@ -53,6 +51,33 @@ public class Calculatrice {
 	this.sign = sign;
 	this.var1 = var1;
 	this.var2 = var2;
+    }
+
+    
+    
+    public void Calculer() {
+	   
+	if(sign == '+') {
+	    resultAdd = var1 + var2;
+	}else if(sign == '-') {
+	    resultSous = var1 - var2;
+	}else if (sign =='*') {
+	    resultMult = var1 * var2;
+	}else {
+	    resultDiv = var1 / var2;
+	}
+    }
+    public String toString() {
+	if(sign == '+') {
+	    return "L'addition "+var1+sign+var2+" = "+resultAdd;
+	}else if(sign == '-') {
+	    return "La soustraction "+var1+sign+var2+" = "+resultSous;
+	}else if (sign =='*') {
+	    return "La multiplication "+var1+sign+var2+" = "+resultMult;
+	}else {
+	    return "La division "+var1+sign+var2+" = "+resultDiv;
+	}
+	
     }
     
     
